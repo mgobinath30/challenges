@@ -1,0 +1,81 @@
+ .result-title {
+    font-size: 18px;
+    text-decoration: none;
+}
+  .result-link {
+    font-size: 15px;
+    color: #3366F0;
+    text-decoration: underline;
+       font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.result-metaData {
+    font-size: 15px;
+    color: gray;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+}
+
+.products{
+	display: flex;
+    flex-wrap: wrap;
+    background: #F0F0F0;
+	}
+	#ui p {
+    margin: 0 0 0;
+}
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+      color: orange;
+    font-size: 21px;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
+.glyphicon {
+    color: #333;
+    padding: 0px 5px 10px 0px;
+}
+.logoContainer{
+	border: 2px solid #333;
+    padding: 11px;
+        margin-bottom: 10px;
+}
+
+#products img {
+    width: 100%;
+}
+.well {
+    background: #E6EBEF;
+    padding: 6px;
+    border: 2px solid #928F8A;
+    margin-bottom: 15px !important;
+}
+.countProducts {
+    background: #E0EED3;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    border: 2px solid #3B783B;
+    margin-bottom: 10px;
+}
+.search {
+    background: #D5CFD1;
+    width: 100%;
+    padding: 4px;
+}
+.search_closeIco {
+    position: relative;
+    float: right;
+    bottom: 30px;
+    right: 10px;
+    font-size: 19px;
+    font-weight: bold;
+    cursor: pointer;
+}

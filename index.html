@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="myApp">
+	<head>
+		<title>Fusion Style</title>
+		<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="stylesheet" href="css/custom.css">
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+				</head>
+				<body ng-controller="myCtrl">
+					<div class="container" id="ui">
+					    <div class="row logoContainer">
+					    	<div class="col-md-12">
+					    		<div class="col-md-6"><a href="javascript:void(0);" title=""><img src="images/logo.png" alt=""></a></div>
+					    		<div class="col-md-6">
+					    		<div class="row"><div class="col-md-12">
+					    			<div class="countProducts">Total Product Count : <span>{{myWelcome.products.length}} | </span> API Hits: 748</div>
+					    			</div>
+					    			<div class="col-md-12">
+					    			<div class="search"><input type="text" ng-model="name" class="form-control" id="usr" placeholder="search (by name or category)" ng-init="asyncFocus=false" ng-blur="asyncFocus=!asyncFocus" ng-focus="asyncFocus=!asyncFocus">
+                                    <span ng-show="name && asyncFocus" ng-click="name=''" class="search_closeIco" ng-mousedown="name=''">X</span>
+					    			</div>
+					    			</div>
+					    		</div>
+					    		</div>
+					    	</div>
+					    </div>
+					    <div class="row">
+
+					    </div>
+						<div class="row" >
+							<div class="col-md-12 products" id="products">
+								<div class="col-md-3" ng-repeat="card in myWelcome.products | filter:name">
+                                  <a href=""><img src="{{card.image}}" alt="{{card.provider}}"></a>
+<p class="result-title">{{card.name}}</p>
+									<div class="row">
+										<div class="col-md-12">
+
+													<p class="result-metaData">
+														<span class="glyphicon glyphicon-euro"></span>  {{card.price}} INR 
+				 
+													</p>
+											
+													<p class="">
+														<span class="glyphicon glyphicon-tag"></span>{{card.category}} category 
+													</p>
+													<p class="productlink">
+														<span class="glyphicon glyphicon-link"></span>
+														{{card.quantity}} Pcs available
+													</p>
+													<!-- <input type="color" name="favcolor" value="{{card.color}}"> -->
+													<p style="background-color: {{card.color}};width: 34px;height: 34px;"></p>  color<br/>
+													<a href="javascript:void(0)">Description #</a>
+													<p class="well">{{card.description  | limitTo: 60 }}</p>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+					</div>
+
+					<script src="js/angular.min.js"></script>
+					<script src="js/jquery.min.js"></script>
+					<script src="js/bootstrap.min.js"></script>
+						<script src="js/custom.js"></script>
+					</body>
+				</html>
+
